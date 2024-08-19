@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crafter",
+  "key": {
+    "#": {
+      "item": "lolmct:cherry_crafting_table"
+    },
+    "D": {
+      "item": "minecraft:dropper"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "III",
+    "I#I",
+    "RDR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quad-lolmcrv:cherry_crafter"
+  }
+}

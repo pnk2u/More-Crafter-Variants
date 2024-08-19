@@ -1,0 +1,9 @@
+{
+  "parent": "quad-lolmcrv:block/bamboo_crafter",
+  "textures": {
+    "top": "minecraft:block/crafter_top_triggered",
+    "south": "quad-lolmcrv:block/bamboo_crafter_south_triggered",
+    "west": "quad-lolmcrv:block/bamboo_crafter_west_triggered",
+    "east": "quad-lolmcrv:block/bamboo_crafter_east_triggered"
+  }
+}

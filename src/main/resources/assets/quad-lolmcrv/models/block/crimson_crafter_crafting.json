@@ -1,0 +1,9 @@
+{
+  "parent": "quad-lolmcrv:block/crimson_crafter_triggered",
+  "textures": {
+    "top": "minecraft:block/crafter_top_crafting",
+    "north": "quad-lolmcrv:block/crimson_crafter_north_crafting",
+    "east": "quad-lolmcrv:block/crimson_crafter_east_crafting",
+    "west": "quad-lolmcrv:block/crimson_crafter_west_crafting"
+  }
+}

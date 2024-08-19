@@ -1,0 +1,9 @@
+{
+  "parent": "quad-lolmcrv:block/cherry_crafter_triggered",
+  "textures": {
+    "top": "minecraft:block/crafter_top_crafting",
+    "north": "quad-lolmcrv:block/cherry_crafter_north_crafting",
+    "east": "quad-lolmcrv:block/cherry_crafter_east_crafting",
+    "west": "quad-lolmcrv:block/cherry_crafter_west_crafting"
+  }
+}
