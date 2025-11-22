@@ -19,12 +19,6 @@
 	"entrypoints": {
 		"main": [
           "de.pnku.mcrv.MoreCrafterVariants"
-		],
-		"fabric-datagen": [
-			"de.pnku.mcrv.MoreCrafterVariantsDatagen"
-		],
-		"client": [
-			"de.pnku.mcrv.MoreCrafterVariantsClient"
 		]
 	},
 	"mixins": ["quad-lolmcrv.mixins.json"],
