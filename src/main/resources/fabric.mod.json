@@ -13,7 +13,7 @@
 		"issues": "https://github.com/pnk2u/More-Crafter-Variants/issues"
 	},
 	"license": "${mod_license}",
-	"icon": "logo.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
