@@ -10,19 +10,15 @@ import org.slf4j.LoggerFactory;
 
 public class MoreCrafterVariants implements ModInitializer {
     public static final String MODID = "quad-lolmcrv";
-    public static boolean isMctLoaded = false;
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
     @Override
     public void onInitialize() {
         if (FabricLoader.getInstance().isModLoaded("lolmct")) {
-            isMctLoaded = true;
             LOGGER.info("MCRV:\"MCT loaded.\"");
-        }
-        if (isMctLoaded) {
-            McrvBlockInit.registerCrafterBlocks();
-            McrvItemInit.registerCrafterItems();
-        } else {throw new RuntimeException("More Crafter Variants:\"Couldn't find More Crafting Tables.\"");}
+        } else {LOGGER.info("More Crafter Variants:\"Couldn't find <More Crafting Tables> mod, using fallback recipes that use Logs in place of Crafting Tables.\"");}
+        McrvBlockInit.registerCrafterBlocks();
+        McrvItemInit.registerCrafterItems();
     }
 
     public static ResourceLocation asId(String path) {

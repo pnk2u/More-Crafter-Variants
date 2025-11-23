@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "#lieonstudio:crafters",
+      "id": "#lieonstudios:crafters",
       "required": false
     }
   ]

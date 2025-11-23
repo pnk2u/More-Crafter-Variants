@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "parent": "minecraft:recipes/root",
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
@@ -26,29 +26,33 @@
       "value": "lolmct:cherry_crafting_table"
     }
   ],
-  "category": "redstone",
-  "group": "crafter",
-  "key": {
-    "#": {
-      "item": "lolmct:cherry_crafting_table"
+  "criteria": {
+    "has_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lolmct:cherry_crafting_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "D": {
-      "item": "minecraft:dropper"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "R": {
-      "item": "minecraft:redstone"
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quad-lolmcrv:cherry_crafter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
-  "pattern": [
-    "III",
-    "I#I",
-    "RDR"
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_table"
+    ]
   ],
-  "result": {
-    "count": 1,
-    "id": "quad-lolmcrv:cherry_crafter"
+  "rewards": {
+    "recipes": [
+      "quad-lolmcrv:cherry_crafter"
+    ]
   }
 }

@@ -1,0 +1,70 @@
+{
+  "parent": "minecraft:recipes/root",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "lolmct"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:registry_contains",
+        "registry": "minecraft:item",
+        "values": [
+          "lolmct:warped_crafting_table"
+        ]
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "lolmct"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:registered",
+        "registry": "minecraft:item",
+        "value": "lolmct:warped_crafting_table"
+      }
+    }
+  ],
+  "criteria": {
+    "has_warped_stems": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:warped_stems"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quad-lolmcrv:warped_crafter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_stems"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quad-lolmcrv:warped_crafter_no_mct_fallback"
+    ]
+  }
+}
