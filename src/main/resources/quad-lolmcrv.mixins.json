@@ -3,7 +3,7 @@
   "package": "de.pnku.mcrv.mixin" ,
   "compatibilityLevel": "JAVA_21" ,
   "mixins": [
-    "ServerGamePacketListenerImplMixin"
+    "CrafterBlockEntityMixin"
   ] ,
   "injectors": {
     "defaultRequire": 1
