@@ -3,6 +3,7 @@
 - `26.1`: Update to <ins>26.1</ins>
 - `1.21.4(-11)`: Update to <ins>1.21.4(-11)</ins>
 - `1.21.4+`: Add _**Pale Oak** Crafter_
+- Add Japanese Translation (Thanks to [@HayaKoh-WeldyAlin](https://www.github.com/HayaKoh-WeldyAlin))
 - Fix _Crafter_ variants not having a correct breaking tool (_Pickaxe_)
 - Overhaul textures fixing a few minor mistakes and improving consistency with vanilla Palettes
 
