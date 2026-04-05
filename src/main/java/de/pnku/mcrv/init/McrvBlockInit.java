@@ -15,6 +15,7 @@ import java.util.List;
 public class McrvBlockInit {
     public static final Block BIRCH_CRAFTER = new MoreCrafterBlock(MapColor.SAND, "birch");
     public static final Block DARK_OAK_CRAFTER = new MoreCrafterBlock(MapColor.COLOR_BROWN, "dark_oak");
+    public static final Block PALE_OAK_CRAFTER = new MoreCrafterBlock(MapColor.QUARTZ, "pale_oak");
     public static final Block SPRUCE_CRAFTER = new MoreCrafterBlock(MapColor.PODZOL, "spruce");
     public static final Block JUNGLE_CRAFTER = new MoreCrafterBlock(MapColor.DIRT, "jungle");
     public static final Block ACACIA_CRAFTER = new MoreCrafterBlock(MapColor.COLOR_ORANGE, "acacia");
@@ -31,6 +32,7 @@ public class McrvBlockInit {
         registerCrafterBlock(JUNGLE_CRAFTER);
         registerCrafterBlock(ACACIA_CRAFTER);
         registerCrafterBlock(DARK_OAK_CRAFTER);
+        registerCrafterBlock(PALE_OAK_CRAFTER);
         registerCrafterBlock(MANGROVE_CRAFTER);
         registerCrafterBlock(CHERRY_CRAFTER);
         registerCrafterBlock(BAMBOO_CRAFTER);

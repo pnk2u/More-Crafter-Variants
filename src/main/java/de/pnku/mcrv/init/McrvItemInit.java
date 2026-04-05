@@ -4,24 +4,40 @@ import de.pnku.mcrv.MoreCrafterVariants;
 import de.pnku.mcrv.block.MoreCrafterBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.core.Registry;
+import net.minecraft.world.level.block.Block;
 
 public class McrvItemInit {
-    public static final BlockItem BIRCH_CRAFTER_I = new BlockItem(McrvBlockInit.BIRCH_CRAFTER, new Item.Properties());
-    public static final BlockItem DARK_OAK_CRAFTER_I = new BlockItem(McrvBlockInit.DARK_OAK_CRAFTER, new Item.Properties());
-    public static final BlockItem SPRUCE_CRAFTER_I = new BlockItem(McrvBlockInit.SPRUCE_CRAFTER, new Item.Properties());
-    public static final BlockItem JUNGLE_CRAFTER_I = new BlockItem(McrvBlockInit.JUNGLE_CRAFTER, new Item.Properties());
-    public static final BlockItem ACACIA_CRAFTER_I = new BlockItem(McrvBlockInit.ACACIA_CRAFTER, new Item.Properties());
-    public static final BlockItem MANGROVE_CRAFTER_I = new BlockItem(McrvBlockInit.MANGROVE_CRAFTER, new Item.Properties());
-    public static final BlockItem CHERRY_CRAFTER_I = new BlockItem(McrvBlockInit.CHERRY_CRAFTER, new Item.Properties());
-    public static final BlockItem BAMBOO_CRAFTER_I = new BlockItem(McrvBlockInit.BAMBOO_CRAFTER, new Item.Properties());
-    public static final BlockItem CRIMSON_CRAFTER_I = new BlockItem(McrvBlockInit.CRIMSON_CRAFTER, new Item.Properties().fireResistant());
-    public static final BlockItem WARPED_CRAFTER_I = new BlockItem(McrvBlockInit.WARPED_CRAFTER, new Item.Properties().fireResistant());
+    public static final BlockItem BIRCH_CRAFTER_I = itemFromBlock(McrvBlockInit.BIRCH_CRAFTER);
+    public static final BlockItem DARK_OAK_CRAFTER_I = itemFromBlock(McrvBlockInit.DARK_OAK_CRAFTER);
+    public static final BlockItem PALE_OAK_CRAFTER_I = itemFromBlock(McrvBlockInit.PALE_OAK_CRAFTER);
+    public static final BlockItem SPRUCE_CRAFTER_I = itemFromBlock(McrvBlockInit.SPRUCE_CRAFTER);
+    public static final BlockItem JUNGLE_CRAFTER_I = itemFromBlock(McrvBlockInit.JUNGLE_CRAFTER);
+    public static final BlockItem ACACIA_CRAFTER_I = itemFromBlock(McrvBlockInit.ACACIA_CRAFTER);
+    public static final BlockItem MANGROVE_CRAFTER_I = itemFromBlock(McrvBlockInit.MANGROVE_CRAFTER);
+    public static final BlockItem CHERRY_CRAFTER_I = itemFromBlock(McrvBlockInit.CHERRY_CRAFTER);
+    public static final BlockItem BAMBOO_CRAFTER_I = itemFromBlock(McrvBlockInit.BAMBOO_CRAFTER);
+    public static final BlockItem CRIMSON_CRAFTER_I = itemFromBlock(McrvBlockInit.CRIMSON_CRAFTER);
+    public static final BlockItem WARPED_CRAFTER_I = itemFromBlock(McrvBlockInit.WARPED_CRAFTER);
 
+    public static BlockItem itemFromBlock(Block block) {
+        return new BlockItem(block, setProperties(block));
+    }
+
+    public static Item.Properties setProperties(Block block) {
+        Item.Properties properties = new Item.Properties()
+                .setId(ResourceKey.create(Registries.ITEM,BuiltInRegistries.BLOCK.getKey(block))).useBlockDescriptionPrefix();
+        if (((MoreCrafterBlock) block).crafterWoodType.equals("crimson") || ((MoreCrafterBlock) block).crafterWoodType.equals("warped")) {
+            properties.fireResistant();
+        }
+        return properties;
+    }
 
     public static void registerCrafterItems() {
         registerCrafterItem(WARPED_CRAFTER_I);
@@ -33,6 +49,7 @@ public class McrvItemInit {
         registerCrafterItem(JUNGLE_CRAFTER_I);
         registerCrafterItem(SPRUCE_CRAFTER_I);
         registerCrafterItem(DARK_OAK_CRAFTER_I);
+        registerCrafterItem(PALE_OAK_CRAFTER_I);
         registerCrafterItem(BIRCH_CRAFTER_I);
     }
 

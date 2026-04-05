@@ -16,7 +16,7 @@
         "condition": "fabric:registry_contains",
         "registry": "minecraft:item",
         "values": [
-          "lolmct:mangrove_crafting_table"
+          "lolmct:pale_oak_crafting_table"
         ]
       }
     }
@@ -34,14 +34,14 @@
       "value": {
         "type": "neoforge:registered",
         "registry": "minecraft:item",
-        "value": "lolmct:mangrove_crafting_table"
+        "value": "lolmct:pale_oak_crafting_table"
       }
     }
   ],
   "category": "redstone",
   "group": "crafter",
   "key": {
-    "#": "#minecraft:mangrove_logs",
+    "#": "#minecraft:pale_oak_logs",
     "D": "minecraft:dropper",
     "I": "minecraft:iron_ingot",
     "R": "minecraft:redstone"
@@ -53,6 +53,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "quad-lolmcrv:mangrove_crafter"
+    "id": "quad-lolmcrv:pale_oak_crafter"
   }
 }

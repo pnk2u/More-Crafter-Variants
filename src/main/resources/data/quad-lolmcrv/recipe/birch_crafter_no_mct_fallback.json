@@ -41,18 +41,10 @@
   "category": "redstone",
   "group": "crafter",
   "key": {
-    "#": {
-      "tag": "minecraft:birch_logs"
-    },
-    "D": {
-      "item": "minecraft:dropper"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    }
+    "#": "#minecraft:birch_logs",
+    "D": "minecraft:dropper",
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone"
   },
   "pattern": [
     "III",

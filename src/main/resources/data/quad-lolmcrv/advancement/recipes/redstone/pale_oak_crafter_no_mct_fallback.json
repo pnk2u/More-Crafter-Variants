@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "parent": "minecraft:recipes/root",
   "fabric:load_conditions": [
     {
       "condition": "fabric:not",
@@ -16,7 +16,7 @@
         "condition": "fabric:registry_contains",
         "registry": "minecraft:item",
         "values": [
-          "lolmct:mangrove_crafting_table"
+          "lolmct:pale_oak_crafting_table"
         ]
       }
     }
@@ -34,25 +34,37 @@
       "value": {
         "type": "neoforge:registered",
         "registry": "minecraft:item",
-        "value": "lolmct:mangrove_crafting_table"
+        "value": "lolmct:pale_oak_crafting_table"
       }
     }
   ],
-  "category": "redstone",
-  "group": "crafter",
-  "key": {
-    "#": "#minecraft:mangrove_logs",
-    "D": "minecraft:dropper",
-    "I": "minecraft:iron_ingot",
-    "R": "minecraft:redstone"
+  "criteria": {
+    "has_pale_oak_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:pale_oak_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quad-lolmcrv:pale_oak_crafter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
   },
-  "pattern": [
-    "III",
-    "I#I",
-    "RDR"
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pale_oak_logs"
+    ]
   ],
-  "result": {
-    "count": 1,
-    "id": "quad-lolmcrv:mangrove_crafter"
+  "rewards": {
+    "recipes": [
+      "quad-lolmcrv:pale_oak_crafter_no_mct_fallback"
+    ]
   }
 }

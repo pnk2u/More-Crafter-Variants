@@ -29,18 +29,10 @@
   "category": "redstone",
   "group": "crafter",
   "key": {
-    "#": {
-      "item": "lolmct:dark_oak_crafting_table"
-    },
-    "D": {
-      "item": "minecraft:dropper"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    }
+    "#": "lolmct:dark_oak_crafting_table",
+    "D": "minecraft:dropper",
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone"
   },
   "pattern": [
     "III",
