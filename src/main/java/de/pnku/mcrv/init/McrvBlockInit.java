@@ -43,6 +43,6 @@ public class McrvBlockInit {
     private static void registerCrafterBlock(Block crafterBlock) {
         Registry.register(BuiltInRegistries.BLOCK, MoreCrafterVariants.asId(((MoreCrafterBlock) crafterBlock).crafterWoodType + "_crafter"), crafterBlock);
         more_crafters.add(crafterBlock);
-        BlockEntityType.CRAFTER.addSupportedBlock(crafterBlock);
+        BlockEntityType.CRAFTER.addValidBlock(crafterBlock);
     }
 }

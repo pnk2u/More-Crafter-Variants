@@ -2,7 +2,7 @@ package de.pnku.mcrv.init;
 
 import de.pnku.mcrv.MoreCrafterVariants;
 import de.pnku.mcrv.block.MoreCrafterBlock;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -56,6 +56,6 @@ public class McrvItemInit {
     private static void registerCrafterItem(BlockItem crafter) {
         Registry.register(BuiltInRegistries.ITEM, MoreCrafterVariants.asId(((MoreCrafterBlock) crafter.getBlock()).crafterWoodType + "_crafter"), crafter);
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.CRAFTER, crafter));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(Items.CRAFTER, crafter));
     }
 }
