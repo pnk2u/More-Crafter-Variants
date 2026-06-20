@@ -56,6 +56,6 @@ public class McrvItemInit {
     private static void registerCrafterItem(BlockItem crafter) {
         Registry.register(BuiltInRegistries.ITEM, MoreCrafterVariants.asId(((MoreCrafterBlock) crafter.getBlock()).crafterWoodType + "_crafter"), crafter);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(Items.CRAFTER, crafter));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.insertAfter(Items.CRAFTER, crafter));
     }
 }
