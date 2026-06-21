@@ -1,3 +1,14 @@
+<a name="1.1.2"></a>
+### 1.1.2:
+- `26.1(2)`: Update to <ins>26.2</ins>
+
+<h2><sub><sub><sup><ins>Download 1.1.2 + 26.1(2)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Crafter Variants 1.1.2 + 26.1(2)" href="https://www.modrinth.com/mod/cQrrq4n2/version/rXCVq9UM">
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
+<a title="Download (Curseforge):&#10;1.1.2 + 26.1(2) - More Crafter Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-crafter-variants/files/8294849">
+<img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
+</sub></sub></h2>
+
 <a name="1.1.1"></a>
 ### 1.1.1:
 - Improve _**Bamboo** Crafter_ textures
