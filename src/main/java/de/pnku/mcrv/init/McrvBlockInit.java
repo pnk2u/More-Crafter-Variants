@@ -3,10 +3,10 @@ package de.pnku.mcrv.init;
 import de.pnku.mcrv.MoreCrafterVariants;
 import de.pnku.mcrv.block.MoreCrafterBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.ArrayList;
@@ -43,6 +43,6 @@ public class McrvBlockInit {
     private static void registerCrafterBlock(Block crafterBlock) {
         Registry.register(BuiltInRegistries.BLOCK, MoreCrafterVariants.asId(((MoreCrafterBlock) crafterBlock).crafterWoodType + "_crafter"), crafterBlock);
         more_crafters.add(crafterBlock);
-        BlockEntityType.CRAFTER.addValidBlock(crafterBlock);
+        BuiltInRegistries.BLOCK_ENTITY_TYPE.getOptional(Identifier.withDefaultNamespace("crafter")).orElseThrow().addValidBlock(crafterBlock);
     }
 }

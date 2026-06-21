@@ -77,7 +77,7 @@ dependencies {
     //compileOnly "maven.modrinth:more-crafting-tables-lieonlion:${project.mct_version_id}"
     //runtimeOnly "maven.modrinth:more-crafting-tables-lieonlion:${project.mct_version_id}"
 	// Quad
-    runtimeOnly "maven.modrinth:quad:${project.quad_version_id}"
+    //runtimeOnly "maven.modrinth:quad:${project.quad_version_id}"
 }
 
 static def version_reduced(String input) { // Reduces a version string by one minor version and sets patch to 0
